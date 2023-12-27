@@ -11,3 +11,4 @@ python3 main.py \
 python3 tools/prepare_effect_layout_example.py
 
 
+# python main.py --config example_data/portugal.py --dataset img --num_processes 2 --log_period 10

@@ -19,3 +19,9 @@ workspace2
 node_modules/
 package.json
 package-lock.json
+
+real_data/
+output*/
+processed_textline_v5/
+raw_data_v2/
+*.zip

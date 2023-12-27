@@ -8,7 +8,7 @@ from loguru import logger
 from tenacity import retry, stop_after_attempt
 
 from text_renderer.font_manager import FontManager
-from text_renderer.config import TextColorCfg, SimpleTextColorCfg
+from text_renderer.config import TextColorCfg, SimpleTextColorCfg,FixedTextColorCfg
 from text_renderer.utils.errors import RetryError, PanicError
 from text_renderer.utils import FontText
 from text_renderer.utils.utils import load_chars_file
@@ -44,7 +44,7 @@ class CorpusCfg:
     font_list_file: Path = None
     clip_length: int = -1
     char_spacing: Union[float, Tuple[float, float]] = -1
-    text_color_cfg: TextColorCfg = SimpleTextColorCfg()
+    text_color_cfg: TextColorCfg = FixedTextColorCfg()#SimpleTextColorCfg()
     horizontal: bool = True
 
     def __init_subclass__(cls, **kwargs):

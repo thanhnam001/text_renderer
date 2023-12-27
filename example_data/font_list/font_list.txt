@@ -1,1 +1,2 @@
-simsun.ttf
+arial.ttf
+town-70-accent-light-1.ttf

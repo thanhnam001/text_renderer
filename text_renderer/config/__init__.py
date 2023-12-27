@@ -94,7 +94,7 @@ class FixedTextColorCfg(TextColorCfg):
     # For generate effect/layout example
     def get_color(self, bg_img: PILImage) -> Tuple[int, int, int, int]:
         alpha = 255
-        text_color = (255, 50, 0, alpha)
+        text_color = (0, 50, 0, alpha)
 
         return text_color
 
@@ -116,7 +116,7 @@ class SimpleTextColorCfg(TextColorCfg):
         g = np.random.randint(0, int(mean * 0.7))
         b = np.random.randint(0, int(mean * 0.7))
         text_color = (r, g, b, alpha)
-
+        text_color=(0,0,0,1)
         return text_color
 
 
@@ -164,7 +164,7 @@ class RenderCfg:
     render_effects: Effects = None
     height: int = 32
     gray: bool = True
-    text_color_cfg: TextColorCfg = None
+    text_color_cfg: TextColorCfg = SimpleTextColorCfg()
     return_bg_and_mask: bool = False
 
 
